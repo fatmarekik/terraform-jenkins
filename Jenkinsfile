@@ -34,7 +34,7 @@ pipeline {
                    accessKeyVariable: 'AWS_ACCESS_KEY_ID',
                    secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
                     sh '''
-                    aws s3 cp glue_job.py s3://$S3_BUCKET/$S3_SCRIPT_PATH/
+                    /usr/local/bin/aws s3 cp glue_job.py s3://$S3_BUCKET/$S3_SCRIPT_PATH/
                     '''
                 }
             }
